@@ -10,7 +10,7 @@
     --body-font-color: #fbdbdb;
     --body-background-colour: #0d0913;
     --body-gradient-colour: #1b1622;
-    --body-highlight-color: #ffbde2;
+    --body-highlight-color: #fda1d5;
 	--footer-backgruond-colour: #ffffff;
 	--footer-header-colour: #0dfd00;
 }
@@ -73,34 +73,28 @@ body {
         #0b1126 75%,
         var(--body-background-colour) 90%
     ); 
+    /* background-color: var(--body-gradient-colour); 
+    background-image: linear-gradient(to bottom, 
+        var(--body-font-color),
+        var(--body-background-colour) 
+    ); */
 }
 
 
 /* Main Title */
 .main-page{
-	width: 100%;
 	height: 100vh;
 
-    font-weight: bold;
-	position: relative;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+    flex-direction: column;
 	align-items: center;
 
-
-	/* background-color: var(--body-gradient-colour); 
-    background-image: linear-gradient(to bottom, 
-        var(--body-font-color),
-        var(--body-background-colour) 
-    ); */
-
+    font-weight: bold;
 }
 .first-name{
     font-size: 10em;
 
-	position: absolute;
-	top: 15%;
+	margin-top: 10%;
 
     background: linear-gradient(to bottom,
         var(--body-background-colour) 50%,
@@ -112,10 +106,8 @@ body {
 .last-name{
     font-size: 5.5em;
 
-	position: absolute;
-	top: 24%;
+    margin-top: -75px;
 
-    /* gradient text color */
     background: linear-gradient(to bottom,
         var(--body-background-colour) 50%,
         var(--body-font-color)
