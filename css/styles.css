@@ -1,122 +1,149 @@
 @charset "UTF-8";
 
 :root {
-  --bs-font-sans-serif: "Plus Jakarta Sans";
-  --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
+    --bs-font-sans-serif: "Plus Jakarta Sans";
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
 
-  /* colours */
-  --body-font-color: #fbdbdb;
-  --body-background-colour: #0d0913;
-  --body-gradient-colour: #1b1622;
-  --body-highlight-color: #ffe2e2;
+    /* colours */
+    --body-font-color: #fbdbdb;
+    --body-background-colour: #0d0913;
+    --body-gradient-colour: #1b1622;
+    --body-highlight-color: #ffe2e2;
 }
 ::selection {
-  color: #000; /* Text color when highlighted */
-  background: var(--body-highlight-color); /* highlight color */
+    color: #000; /* Text color when highlighted */
+    background: var(--body-highlight-color); /* highlight color */
 } 
 
 body {
-  margin: 0;
-  height: 100vh; 
 
-  font-family: var(--bs-body-font-family);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
-  
-  color: var(--body-font-color);
+	width: 100%;
+	height: 100vh;
+    margin: 0;
 
-  /* background-color: var(--body-gradient-colour); 
-  background-image: linear-gradient(to bottom, 
-    var(--body-font-color),
-    var(--body-background-colour) 
-  ); */
-
-  background: radial-gradient(
-    circle at top, 
-    #fff4f0, 
-    #0b1126 75%,
-    var(--body-background-colour)
-  ); 
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    
+    color: var(--body-font-color);
+	background: var(--body-background-colour)
 }
 
-    
-  /* desert */
-  /* background-image: linear-gradient(to bottom,
-    #e4eeff 0%,
-    #ffe2a4 25%,
-    #0b0a0a 50%
-  ); */
-
-
+/* Navbar */
 .navbar{
-  float: right;
+    float: right;
 
-  font-family: var(--bs-body-font-family);
-  font-weight: bold;
+    font-family: var(--bs-body-font-family);
+    font-weight: bold;
 }
 .navbar ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 .navbar li{
-  float: left;
+    float: left;
 }
 .navbar a{
-  display: block;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 .navbar li a:hover{
-  color: var(--body-highlight-color);
+    color: var(--body-highlight-color);
 }
 
+.nav-main-page-container{
+	background: radial-gradient(
+        circle at top, 
+        #fff4f0, 
+        #0b1126 75%,
+        var(--body-background-colour) 90%
+    ); 
+}
 
 
 /* Main Title */
-.main-title{
-  font-weight: bold;
+.main-page{
+	width: 100%;
+	height: 100vh;
 
-  position: absolute;
-  top: 15%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+    font-weight: bold;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+	/* background-color: var(--body-gradient-colour); 
+    background-image: linear-gradient(to bottom, 
+        var(--body-font-color),
+        var(--body-background-colour) 
+    ); */
+
 }
 .first-name{
-  font-size: 10em;
+    font-size: 10em;
 
-  background: linear-gradient(to bottom,
-    var(--body-background-colour) 50%,
-    var(--body-font-color)
-  );
-  background-clip: text;
-  color: rgba(255, 255, 255, 0);
+	position: absolute;
+	top: 15%;
+
+    background: linear-gradient(to bottom,
+        var(--body-background-colour) 50%,
+        var(--body-font-color)
+    );
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
 }
 .last-name{
-  font-size: 5.5em;
+    font-size: 5.5em;
 
-  position: absolute;
-  top: 85%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+	position: absolute;
+	top: 24%;
 
-  /* gradient text color */
-  background: linear-gradient(to bottom,
-    var(--body-background-colour) 50%,
-    var(--body-font-color)
-  );
-  background-clip: text;
-  color: rgba(255, 255, 255, 0);
+    /* gradient text color */
+    background: linear-gradient(to bottom,
+        var(--body-background-colour) 50%,
+        var(--body-font-color)
+    );
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
+}
+
+hr{
+
+	border: none; /* Remove default border */
+    height: 2px; /* Set the height of the line */
+    width: 50%; /* Set the width of the line */
+    margin: 0 auto; /* Add margin above and below the line, and center the line horizontally */
+    background-color: white; /* Set the color of the line */
+
+}
+
+.additional-content{
+	display: flex;
+
+    
+	width: 100%;
+	height: 100vh;
+
+	background: var(--body-background-colour);
 }
 
 
 
-
+.footer{
+	display: flex;
+	padding: 20px;
+	justify-content: space-around;
+	color: #836868;
+}
 
 
 
@@ -124,52 +151,52 @@ body {
 
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+    font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 2.5rem;
-  }
+    h1, .h1 {
+        font-size: 2.5rem;
+    }
 }
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+    font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 2rem;
-  }
+    h2, .h2 {
+        font-size: 2rem;
+    }
 }
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+    font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
+    h3, .h3 {
+        font-size: 1.75rem;
+    }
 }
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+    font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
-  h4, .h4 {
-    font-size: 1.5rem;
-  }
+    h4, .h4 {
+        font-size: 1.5rem;
+    }
 }
 h5, .h5 {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 h6, .h6 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 
