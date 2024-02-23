@@ -5,19 +5,55 @@
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
+
+  /* colours */
+  --body-font-color: #f1d7d7;
+  --body-background-colour: #0d0913;
+  --body-background-gradient: #1c1919;
+}
+
+
+/* Font for main title */
+.main-title {
+  font-size: 10em;
+  font-weight: bold;
+
+  position: absolute; /* Position the element absolutely */
+  top: 25%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+
+  background: linear-gradient(to top,
+    var(--body-background-colour),
+    var(--body-font-color) 
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body {
   margin: 0;
+  height: 100vh; 
+
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
-  text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  
+  color: var(--body-font-color);
+
+  background-color: var(--body-background-colour); 
+  background-image: linear-gradient(to bottom, 
+    #fff4f0 0%,
+    var(--body-background-colour) 
+  );
+
+  /* background-image: radial-gradient(closest-side at 50% 50%, #fff4f0, var(--body-background-colour)),  */
+  /* background: radial-gradient(circle, #ffffff, #000000) top/100% 100%; */
+  /* linear-gradient(to bottom, #000000, #ffffff) center/100% 20%; */
+
+
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -26,7 +62,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-weight: 500;
   line-height: 1.2;
 }
-
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
@@ -35,7 +70,6 @@ h1, .h1 {
     font-size: 2.5rem;
   }
 }
-
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
@@ -44,7 +78,6 @@ h2, .h2 {
     font-size: 2rem;
   }
 }
-
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
@@ -53,7 +86,6 @@ h3, .h3 {
     font-size: 1.75rem;
   }
 }
-
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
@@ -62,15 +94,12 @@ h4, .h4 {
     font-size: 1.5rem;
   }
 }
-
 h5, .h5 {
   font-size: 1.25rem;
 }
-
 h6, .h6 {
   font-size: 1rem;
 }
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
